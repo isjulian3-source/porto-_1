@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me | Isrofi Julian Pratama</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #e9edf2);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* NAVIGASI */
+        .navbar {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            padding: 15px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .navbar a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 15px;
+        }
+
+        .navbar a:hover,
+        .navbar .active {
+            color: #898400;
+        }
+
+        /* KARTU ABOUT */
+        .about-card {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+        }
+
+        /* HEADER */
+        .card-header {
+            background: linear-gradient(120deg, #c6d800, #898400);
+            padding: 35px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid black;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-header h1 {
+            font-size: 30px;
+        }
+
+        .card-header p {
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        /* CONTENT */
+        .card-body {
+            padding: 30px;
+        }
+
+        .about-section {
+            margin-bottom: 25px;
+        }
+
+        .about-section h2 {
+            color: #1e2f3d;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .about-section h2 i {
+            color: #2c7da0;
+            margin-right: 8px;
+        }
+
+        .about-section p {
+            color: #4a627a;
+            line-height: 1.7;
+        }
+
+        /* SKILL */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .skill {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            color: #1e2f3d;
+            font-weight: 600;
+        }
+
+        .skill i {
+            display: block;
+            font-size: 25px;
+            color: #2c7da0;
+            margin-bottom: 8px;
+        }
+
+        /* INFO */
+        .info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .info-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .info-item span {
+            display: block;
+            color: #7d8f9c;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .info-item strong {
+            color: #1e2f3d;
+        }
+
+        /* FOOTER */
+        .card-footer {
+            background: #f9fbfd;
+            padding: 15px;
+            text-align: center;
+            color: #7d8f9c;
+            font-size: 12px;
+            border-top: 1px solid #eef2f5;
+        }
+
+        /* MOBILE */
+        @media (max-width: 500px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .navbar {
+                font-size: 14px;
+            }
+
+            .navbar a {
+                margin-right: 7px;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
+
+            .skills,
+            .info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGASI -->
+    <nav class="navbar">
+        <a href="index.html">Home</a> |
+        <a href="cv.Zuliasetyaningsih.pdf" download>Download CV</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="about.html" class="active">About me</a>
+    </nav>
+
+    <!-- ABOUT CARD -->
+    <div class="about-card">
+
+        <!-- HEADER -->
+        <div class="card-header">
+
+            <div class="avatar">
+                <img src="53f4d9a766e4af5ad6425f335fd4b0eb.jpg"
+                     alt="Foto Profil">
+            </div>
+
+            <h1>Isrofi Julian Pratama</h1>
+
+            <p>
+                <i class="fas fa-code"></i>
+                Student of Komputama Majenang
+            </p>
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="card-body">
+
+            <!-- TENTANG SAYA -->
+            <div class="about-section">
+
+                <h2>
+                    <i class="fas fa-user"></i>
+                    About Me
+                </h2>
+
+                <p>
+                    Halo, saya Isrofi Julian Pratama.
+                    Saya adalah seorang siswa yang sedang belajar
+                    tentang HTML, CSS, dan teknologi web.
+                    Saya tertarik untuk mengembangkan kemampuan
+                    dalam bidang pemrograman dan teknologi.
+                </p>
+
+            </div>
+
+            <!-- SKILL -->
+            <div class="about-section">
+
+                <h2>
+                    <i class="fas fa-laptop-code"></i>
+                    Skills
+                </h2>
+
+                <div class="skills">
+
+                    <div class="skill">
+                        <i class="fab fa-html5"></i>
+                        HTML
+                    </div>
+
+                    <div class="skill">
+                        <i class="fab fa-css3-alt"></i>
+                        CSS
+                    </div>
+
+                    <div class="skill">
+                        <i class="fab fa-js"></i>
+                        JavaScript
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- INFORMASI -->
+            <div class="about-section">
+
+                <h2>
+                    <i class="fas fa-info-circle"></i>
+                    Informasi
+                </h2>
+
+                <div class="info">
+
+                    <div class="info-item">
+                        <span>Nama</span>
+                        <strong>Isrofi Julian Pratama</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Status</span>
+                        <strong>Pelajar</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Sekolah</span>
+                        <strong>Komputama Majenang</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Lokasi</span>
+                        <strong>Cipari, Indonesia</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="card-footer">
+            <i class="far fa-envelope"></i>
+            Isjulian3@gmail.com
+            &nbsp; | &nbsp;
+            <i class="fas fa-phone-alt"></i>
+            +62 823-2447-4083
+        </div>
+
+    </div>
+
+</body>
+</html>

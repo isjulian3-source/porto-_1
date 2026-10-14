@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Isrofi Julian Pratama</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #e9edf2);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* NAVIGASI */
+        .navbar {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            padding: 15px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .navbar a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 15px;
+        }
+
+        .navbar a:hover {
+            color: #898400;
+        }
+
+        .navbar .active {
+            color: #898400;
+        }
+
+        /* KARTU CONTACT */
+        .contact-card {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+        }
+
+        /* HEADER */
+        .card-header {
+            background: linear-gradient(120deg, #c6d800, #898400);
+            padding: 35px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .card-header i {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card-header h1 {
+            font-size: 30px;
+        }
+
+        .card-header p {
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        /* CONTENT */
+        .card-body {
+            padding: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #f8fafc;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            transition: 0.2s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-item i {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef2f5;
+            border-radius: 50%;
+            color: #2c7da0;
+            font-size: 20px;
+        }
+
+        .contact-item h3 {
+            font-size: 15px;
+            color: #4a627a;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a,
+        .contact-item p {
+            color: #1e2f3d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            color: #2c7da0;
+        }
+
+        /* SOCIAL MEDIA */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f4f8;
+            color: #2c3e4e;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+
+        .social-btn:hover {
+            background: #2c7da0;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        .card-footer {
+            background: #f9fbfd;
+            padding: 15px;
+            text-align: center;
+            color: #7d8f9c;
+            font-size: 12px;
+            border-top: 1px solid #eef2f5;
+        }
+
+        /* MOBILE */
+        @media (max-width: 500px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .navbar {
+                font-size: 14px;
+            }
+
+            .navbar a {
+                margin-right: 8px;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
+
+            .contact-item {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGASI -->
+    <nav class="navbar">
+        <a href="index.html">Home</a> |
+        <a href="cv.Zuliasetyaningsih.pdf" download>Download CV</a> |
+        <a href="contact.html" class="active">Contact</a> |
+        <a href="about.html">About me</a>
+    </nav>
+
+    <!-- CONTACT CARD -->
+    <div class="contact-card">
+
+        <div class="card-header">
+            <i class="fas fa-address-card"></i>
+
+            <h1>Contact Me</h1>
+
+            <p>
+                Jangan ragu untuk menghubungi saya
+            </p>
+        </div>
+
+        <div class="card-body">
+
+            <!-- EMAIL -->
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:Isjulian3@gmail.com">
+                        Isjulian3@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- PHONE -->
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+
+                <div>
+                    <h3>Nomor Telepon</h3>
+                    <a href="tel:+6282324474083">
+                        +62 823-2447-4083
+                    </a>
+                </div>
+            </div>
+
+            <!-- LOKASI -->
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+
+                <div>
+                    <h3>Lokasi</h3>
+                    <p>Cipari, Indonesia</p>
+                </div>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="social-links">
+
+                <a href="#" class="social-btn">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#" class="social-btn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" class="social-btn">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#" class="social-btn">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="card-footer">
+            <i class="far fa-envelope"></i>
+            Isjulian3@gmail.com
+            &nbsp; | &nbsp;
+            <i class="fas fa-phone-alt"></i>
+            +62 823-2447-4083
+        </div>
+
+    </div>
+
+</body>
+</html>

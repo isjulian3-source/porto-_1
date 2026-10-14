@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya | Portfolio Ringkas</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            min-height: 100vh;
+            padding: 0 1rem 2rem;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 15px 20px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .navbar a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 5px;
+            transition: 0.2s;
+        }
+
+        .navbar a:hover {
+            color: #2c7da0;
+            text-decoration: underline;
+        }
+
+        .profile-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Kartu profil ringkas */
+        .profile-card {
+            max-width: 700px;
+            width: 100%;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(206, 196, 0, 0.10196078431372549);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Header dengan video */
+        .card-header {
+            position: relative;
+            padding: 0;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .header-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem 1.5rem;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            backdrop-filter: blur(4px);
+            border: 3px solid black;
+        }
+
+        .avatar i {
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .card-header h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .card-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.3rem;
+        }
+
+        /* Konten utama */
+        .card-body {
+            padding: 1.8rem 2rem 2rem;
+            background: white;
+        }
+
+        /* Bio singkat */
+        .bio {
+            text-align: center;
+            margin-bottom: 1.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eef2f5;
+        }
+
+        .bio p {
+            color: #2c3e4e;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Info grid ringkas */
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            flex: 1;
+            min-width: 120px;
+            background: #f8fafc;
+            padding: 0.8rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .info-item i {
+            font-size: 1.4rem;
+            color: #2c7da0;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .info-item span {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #4a627a;
+            display: block;
+        }
+
+        .info-item .value {
+            font-weight: 700;
+            color: #1e2f3d;
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
+        }
+
+        /* Tombol sosial media */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .social-btn {
+            background: #f0f4f8;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c3e4e;
+            font-size: 1.4rem;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .social-btn:hover {
+            background: #2c7da0;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer cantik */
+        .card-footer {
+            background: #f9fbfd;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #7d8f9c;
+            border-top: 1px solid #eef2f5;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1rem;
+            }
+            .card-body {
+                padding: 1.5rem;
+            }
+            .info-grid {
+                flex-direction: column;
+                gap: 0.7rem;
+            }
+            .info-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: left;
+                gap: 1rem;
+            }
+            .info-item i {
+                margin-bottom: 0;
+                width: 30px;
+            }
+            .info-item span, .info-item .value {
+                display: inline;
+                font-size: 0.85rem;
+            }
+            .info-item .value {
+                margin-left: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home">Home</a> |
+        <a href="cv.pdf" download>Download CV</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="about.html">About me</a>
+    </nav>
+
+    <div class="profile-wrapper">
+    <div class="profile-card" id="home">
+        <!-- Bagian atas dengan video -->
+        <div class="card-header">
+            <video class="header-video" autoplay muted loop playsinline>
+                <source src="PC_Wallpapers_WP4K_pindown.io_1791351756.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+
+            <div class="header-overlay"></div>
+
+            <div class="header-content">
+                <div class="avatar">
+                    <img src="53f4d9a766e4af5ad6425f335fd4b0eb.jpg">
+                </div>
+                <h1>Isrofi Julian Pratama</h1>
+                <p><i class="fas fa-code"></i> Student of Komputama Majenang</p>
+            </div>
+        </div>
+
+        <!-- Konten utama -->
+        <div class="card-body">
+            <div class="bio" id="about"><h2>About Me</h2><p>Melaksanakan semua tugas dengan baik</p>
+            </div>
+
+            <!-- Info ringkas: lokasi, pengalaman, project -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Lokasi</span>
+                    <div class="value">Cipari, Id</div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Pengalaman</span>
+                    <div class="value">&gt; 1 tahun</div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Proyek</span>
+                    <div class="value">1 selesai</div>
+                </div>
+            </div>
+
+            <!-- Social media links -->
+            <div class="social-links">
+                <a href="#" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="card-footer" id="contact">
+            <span><i class="far fa-envelope"></i> Isjulian3@Gmail.com  |  <i class="fas fa-phone-alt"></i> +628 2324 47 4083</span>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
